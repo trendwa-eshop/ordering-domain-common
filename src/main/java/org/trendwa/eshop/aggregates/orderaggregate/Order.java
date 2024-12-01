@@ -7,12 +7,12 @@ import java.util.*;
 
 public class Order extends AggregateRoot<UUID> {
 
-    private LocalDateTime orderDate;
-    private Address shippingAddress;
-    private UUID buyerId;
-    private OrderStatus orderStatus;
-    private String description;
-    private boolean isDraft;
+    private final LocalDateTime orderDate;
+    private final Address shippingAddress;
+    private final UUID buyerId;
+    private final OrderStatus orderStatus;
+    private final String description;
+    private final boolean isDraft;
     private Collection<OrderItem> orderItems = Collections.emptyList();
 
     private Order(Builder builder) {
